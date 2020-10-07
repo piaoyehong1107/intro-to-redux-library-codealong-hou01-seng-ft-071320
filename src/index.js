@@ -1,4 +1,5 @@
 // ./src/index.js
+// eslint-disable-next-line
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -6,5 +7,7 @@ import { createStore } from 'redux'; /* code change */
 import shoppingListItemReducer from './reducers/shoppingListItemReducer.js';
 import App from './App';
 import './index.css';
+
+const store = createStore(shoppingListItemReducer);
 
 ReactDOM.render(<App />, document.getElementById('root'));
